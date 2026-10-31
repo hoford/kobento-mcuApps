@@ -1,0 +1,7227 @@
+{
+ "header": {
+  "apiLevel": 7,
+  "width": 320,
+  "height": 240,
+  "profiles": 513,
+  "contentDescription": "Wi-Fi networks (light)"
+ },
+ "root": [
+  {
+   "global": [
+    {
+     "resources": {
+      "variables": [
+       {
+        "name": "system.wifi_status",
+        "type": "string",
+        "value": "Searching\u2026",
+        "export": true
+       },
+       {
+        "name": "system.wifi_page",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_pages",
+        "value": 1,
+        "export": true
+       },
+       {
+        "name": "system.wifi_scanning",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_0_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_0_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_0_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_0_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_1_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_1_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_1_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_1_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_2_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_2_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_2_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_2_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_3_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_3_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_3_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_3_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_4_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_4_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_4_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_4_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_5_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_5_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_5_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_5_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_6_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_6_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_6_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_6_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_7_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_7_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_7_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_7_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_8_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_8_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_8_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_8_lock",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_9_ssid",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "system.wifi_9_state",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_9_signal",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "system.wifi_9_lock",
+        "value": 0,
+        "export": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "column": {
+    "modifiers": [
+     "fillMaxSize",
+     {
+      "background": "#FFFFFF"
+     }
+    ],
+    "children": [
+     {
+      "row": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 66
+        }
+       ],
+       "children": [
+        {
+         "box": {
+          "modifiers": [
+           {
+            "horizontalWeight": 1
+           },
+           "fillMaxHeight"
+          ],
+          "children": [
+           {
+            "canvas": {
+             "modifiers": [
+              "fillMaxSize"
+             ],
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 25.5
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "Wi-Fi",
+                "x": 18,
+                "y": 42,
+                "panX": -1,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        },
+        {
+         "box": {
+          "modifiers": [
+           {
+            "width": 78
+           },
+           "fillMaxHeight",
+           {
+            "onClick": {
+             "type": "hostAction",
+             "actionId": 0,
+             "metadata": "wifi.page"
+            }
+           }
+          ],
+          "children": [
+           {
+            "canvas": {
+             "modifiers": [
+              "fillMaxSize"
+             ],
+             "commands": [
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_pages",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#FFFFFF"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 6,
+                   "top": 13.5,
+                   "right": "componentWidth - 6",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 6,
+                   "top": 13.5,
+                   "right": "componentWidth - 6",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#111111"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 18
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "@system.wifi_page",
+                   "x": "componentWidth / 2",
+                   "y": 40.5,
+                   "panX": 0,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        },
+        {
+         "box": {
+          "modifiers": [
+           {
+            "width": 84
+           },
+           "fillMaxHeight",
+           {
+            "onClick": {
+             "type": "hostAction",
+             "actionId": 0,
+             "metadata": "wifi.scan"
+            }
+           }
+          ],
+          "children": [
+           {
+            "canvas": {
+             "modifiers": [
+              "fillMaxSize"
+             ],
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 13.5,
+                "right": "componentWidth - 6",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "width": 1
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 13.5,
+                "right": "componentWidth - 6",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_scanning",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#111111"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 19.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Scan",
+                   "x": "componentWidth / 2",
+                   "y": 40.5,
+                   "panX": 0,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_scanning",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 19.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "\u00b7\u00b7\u00b7",
+                   "x": "componentWidth / 2",
+                   "y": 40.5,
+                   "panX": 0,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        },
+        {
+         "box": {
+          "modifiers": [
+           {
+            "width": 90
+           },
+           "fillMaxHeight",
+           {
+            "onClick": {
+             "type": "hostAction",
+             "actionId": 0,
+             "metadata": "doc.back"
+            }
+           }
+          ],
+          "children": [
+           {
+            "canvas": {
+             "modifiers": [
+              "fillMaxSize"
+             ],
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 13.5,
+                "right": "componentWidth - 6",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "width": 1
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 13.5,
+                "right": "componentWidth - 6",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 19.5
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "Done",
+                "x": "componentWidth / 2",
+                "y": 40.5,
+                "panX": 0,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 24
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 16.5
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@system.wifi_status",
+             "x": 18,
+             "y": 16,
+             "panX": -1,
+             "panY": 0
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=0"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_0_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_0_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_0_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_0_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_0_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_0_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_0_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_0_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=1"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_1_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_1_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_1_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_1_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_1_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_1_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_1_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_1_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=2"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_2_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_2_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_2_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_2_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_2_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_2_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_2_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_2_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=3"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_3_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_3_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_3_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_3_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_3_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_3_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_3_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_3_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=4"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_4_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_4_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_4_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_4_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_4_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_4_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_4_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_4_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=5"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_5_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_5_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_5_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_5_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_5_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_5_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_5_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_5_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=6"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_6_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_6_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_6_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_6_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_6_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_6_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_6_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_6_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=7"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_7_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_7_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_7_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_7_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_7_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_7_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_7_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_7_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=8"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_8_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_8_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_8_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_8_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_8_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_8_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_8_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_8_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "box": {
+       "modifiers": [
+        "fillMaxWidth",
+        {
+         "height": 55.5
+        },
+        {
+         "onClick": {
+          "type": "hostAction",
+          "actionId": 0,
+          "metadata": "wifi.join=9"
+         }
+        }
+       ],
+       "children": [
+        {
+         "canvas": {
+          "modifiers": [
+           "fillMaxSize"
+          ],
+          "commands": [
+           {
+            "conditionalOperations": {
+             "condition": "gt",
+             "v1": "@system.wifi_9_state",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 12,
+                "top": 3,
+                "right": "componentWidth - 12",
+                "bottom": 52.5,
+                "rx": 12,
+                "ry": 12
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.5
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "ne",
+                "v1": "@system.wifi_9_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 1
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": 12,
+                   "top": 3,
+                   "right": "componentWidth - 12",
+                   "bottom": 52.5,
+                   "rx": 12,
+                   "ry": 12
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_9_signal - 0) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 27,
+                "top": 31.5,
+                "right": 31.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_9_signal - 30) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 34.5,
+                "top": 27,
+                "right": 39,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_9_signal - 55) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 42,
+                "top": 22.5,
+                "right": 46.5,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": "0.2 + 0.8 * clamp(0, 1, (@system.wifi_9_signal - 80) * 1000)"
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 49.5,
+                "top": 18,
+                "right": 54,
+                "bottom": 37.5,
+                "rx": 1.5,
+                "ry": 1.5
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#111111"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 21
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@system.wifi_9_ssid",
+                "x": 69,
+                "y": 25.5,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#1B7A34"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connected",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 2,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#8A5A00"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Connecting\u2026",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 3,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 4,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Open \u00b7 no password",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 5,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Saved \u00b7 not in range",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 6,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#B3261E"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Couldn't connect",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_state",
+                "v2": 7,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 15
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "Needs a password \u00b7 add from computer",
+                   "x": 69,
+                   "y": 45,
+                   "panX": -1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@system.wifi_9_lock",
+                "v2": 1,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "width": 2.25
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": "componentWidth - 41.25",
+                   "top": 15,
+                   "right": "componentWidth - 30.75",
+                   "bottom": 25.5,
+                   "startAngle": 180,
+                   "sweepAngle": 180
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 41.25",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 41.25",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": "componentWidth - 30.75",
+                   "y1": 20.25,
+                   "x2": "componentWidth - 30.75",
+                   "y2": 25.5
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#555555"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawRoundRect": {
+                   "left": "componentWidth - 43.5",
+                   "top": 25.5,
+                   "right": "componentWidth - 28.5",
+                   "bottom": 36,
+                   "rx": 2.25,
+                   "ry": 2.25
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
