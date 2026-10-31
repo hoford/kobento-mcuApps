@@ -1,0 +1,377 @@
+{
+ "header": {
+  "apiLevel": 7,
+  "width": 792,
+  "height": 272,
+  "profiles": 513,
+  "contentDescription": "Remote Compose welcome card for a wide e-paper strip"
+ },
+ "root": [
+  {
+   "box": {
+    "modifiers": [
+     "fillMaxSize"
+    ],
+    "children": [
+     {
+      "canvas": {
+       "modifiers": [
+        "fillMaxSize"
+       ],
+       "commands": [
+        {
+         "paint": {
+          "ops": [
+           {
+            "shader": 0
+           },
+           {
+            "color": "#FFFFFF"
+           },
+           {
+            "style": "fill"
+           },
+           {
+            "alpha": 1.0
+           }
+          ]
+         }
+        },
+        {
+         "drawRect": {
+          "left": 0,
+          "top": 0,
+          "right": "windowWidth",
+          "bottom": "windowHeight"
+         }
+        },
+        {
+         "save": {
+          "commands": [
+           {
+            "translate": {
+             "dx": "(windowWidth - 792 * min(windowWidth / 792, windowHeight / 272)) / 2",
+             "dy": "(windowHeight - 272 * min(windowWidth / 792, windowHeight / 272)) / 2"
+            }
+           },
+           {
+            "scale": {
+             "sx": "min(windowWidth / 792, windowHeight / 272)",
+             "sy": "min(windowWidth / 792, windowHeight / 272)"
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 7
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 150,
+             "cy": 112,
+             "radius": 40
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 7
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 196,
+             "cy": 112,
+             "radius": 40
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 7
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 173,
+             "cy": 152,
+             "radius": 40
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 173,
+             "cy": 125,
+             "radius": 9
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 58
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Remote Compose",
+             "x": 290,
+             "y": 104,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 21
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "documents drawn on the device, a few KB each",
+             "x": 292,
+             "y": 146,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 2
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 292,
+             "y1": 176,
+             "x2": 760,
+             "y2": 176
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 21
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "CrowPanel 5.79\u2033 e-paper  \u00b7  792 \u00d7 272  \u00b7  ESP32-S3",
+             "x": 292,
+             "y": 206,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 18
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Turn the dial for the next document, press it to redraw",
+             "x": 292,
+             "y": 238,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 3
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRoundRect": {
+             "left": 8,
+             "top": 8,
+             "right": 784,
+             "bottom": 264,
+             "rx": 18,
+             "ry": 18
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

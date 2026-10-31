@@ -1,0 +1,20 @@
+# Muse Gadget firmware, on any board with a screen. Loaded after the SDK's defaults and the
+# board's (boards/<BOARD>/sdkconfig.defaults), then boards/<BOARD>/sdkconfig.muse-gadget.defaults.
+
+CONFIG_ESPTOOLPY_FLASHSIZE="16MB"
+CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y
+CONFIG_BT_NIMBLE_MEM_ALLOC_MODE_EXTERNAL=y
+
+# 16 MB: the Muse layout (4 MB OTA slots); a copy of the SDK's partitions_muse.csv.
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# Not signed: the SDK's dev key path is relative to its own directory, and OTA is off.
+# CONFIG_SECURE_SIGNED_APPS_NO_SECURE_BOOT is not set
+# CONFIG_SECURE_BOOT_BUILD_SIGNED_BINARIES is not set
+
+# ── Status on the screen, drawn by components/muse_rc over RemoteCompose ──
+CONFIG_HOMEHUB_LED_BACKEND_EXTERNAL=y
+
+# ── C++: rccore uses exceptions and dynamic_cast ──
+CONFIG_COMPILER_CXX_EXCEPTIONS=y
+CONFIG_COMPILER_CXX_RTTI=y

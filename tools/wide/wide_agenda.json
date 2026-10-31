@@ -1,0 +1,941 @@
+{
+ "header": {
+  "apiLevel": 7,
+  "width": 792,
+  "height": 272,
+  "profiles": 513,
+  "contentDescription": "A day's agenda (sample data)"
+ },
+ "root": [
+  {
+   "box": {
+    "modifiers": [
+     "fillMaxSize"
+    ],
+    "children": [
+     {
+      "canvas": {
+       "modifiers": [
+        "fillMaxSize"
+       ],
+       "commands": [
+        {
+         "paint": {
+          "ops": [
+           {
+            "shader": 0
+           },
+           {
+            "color": "#FFFFFF"
+           },
+           {
+            "style": "fill"
+           },
+           {
+            "alpha": 1.0
+           }
+          ]
+         }
+        },
+        {
+         "drawRect": {
+          "left": 0,
+          "top": 0,
+          "right": "windowWidth",
+          "bottom": "windowHeight"
+         }
+        },
+        {
+         "save": {
+          "commands": [
+           {
+            "translate": {
+             "dx": "(windowWidth - 792 * min(windowWidth / 792, windowHeight / 272)) / 2",
+             "dy": "(windowHeight - 272 * min(windowWidth / 792, windowHeight / 272)) / 2"
+            }
+           },
+           {
+            "scale": {
+             "sx": "min(windowWidth / 792, windowHeight / 272)",
+             "sy": "min(windowWidth / 792, windowHeight / 272)"
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRect": {
+             "left": 0,
+             "top": 0,
+             "right": 220,
+             "bottom": 272
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 24
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "THURSDAY",
+             "x": 110,
+             "y": 58,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 104
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "23",
+             "x": 110,
+             "y": 140,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 20
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "OCTOBER 2026",
+             "x": 110,
+             "y": 222,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Today",
+             "x": 248,
+             "y": 34,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 20
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "2 of 4 done",
+             "x": 768,
+             "y": 34,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 2
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 248,
+             "y1": 54,
+             "x2": 768,
+             "y2": 54
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "9:00",
+             "x": 300,
+             "y": 90,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRoundRect": {
+             "left": 320,
+             "top": 77,
+             "right": 344,
+             "bottom": 101,
+             "rx": 4,
+             "ry": 4
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 3
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 325,
+             "y1": 89,
+             "x2": 330,
+             "y2": 95
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 330,
+             "y1": 95,
+             "x2": 339,
+             "y2": 83
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Stand-up",
+             "x": 360,
+             "y": 89,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Video call",
+             "x": 768,
+             "y": 89,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 248,
+             "y1": 114,
+             "x2": 768,
+             "y2": 114
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "11:30",
+             "x": 300,
+             "y": 140,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRoundRect": {
+             "left": 320,
+             "top": 127,
+             "right": 344,
+             "bottom": 151,
+             "rx": 4,
+             "ry": 4
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 3
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 325,
+             "y1": 139,
+             "x2": 330,
+             "y2": 145
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 330,
+             "y1": 145,
+             "x2": 339,
+             "y2": 133
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Design review",
+             "x": 360,
+             "y": 139,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Room 4B \u00b7 RC players",
+             "x": 768,
+             "y": 139,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 248,
+             "y1": 164,
+             "x2": 768,
+             "y2": 164
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "14:00",
+             "x": 300,
+             "y": 190,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 2
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRoundRect": {
+             "left": 320,
+             "top": 177,
+             "right": 344,
+             "bottom": 201,
+             "rx": 4,
+             "ry": 4
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Flash the CrowPanel",
+             "x": 360,
+             "y": 189,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Three static documents",
+             "x": 768,
+             "y": 189,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 248,
+             "y1": 214,
+             "x2": 768,
+             "y2": 214
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "16:30",
+             "x": 300,
+             "y": 240,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 2
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRoundRect": {
+             "left": 320,
+             "top": 227,
+             "right": 344,
+             "bottom": 251,
+             "rx": 4,
+             "ry": 4
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Bike home",
+             "x": 360,
+             "y": 239,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Before the rain",
+             "x": 768,
+             "y": 239,
+             "panX": 1,
+             "panY": 0
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

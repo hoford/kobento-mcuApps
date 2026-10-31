@@ -1,0 +1,2236 @@
+{
+ "header": {
+  "apiLevel": 7,
+  "width": 792,
+  "height": 272,
+  "profiles": 513,
+  "contentDescription": "Five-day weather forecast (sample data)"
+ },
+ "root": [
+  {
+   "box": {
+    "modifiers": [
+     "fillMaxSize"
+    ],
+    "children": [
+     {
+      "canvas": {
+       "modifiers": [
+        "fillMaxSize"
+       ],
+       "commands": [
+        {
+         "paint": {
+          "ops": [
+           {
+            "shader": 0
+           },
+           {
+            "color": "#FFFFFF"
+           },
+           {
+            "style": "fill"
+           },
+           {
+            "alpha": 1.0
+           }
+          ]
+         }
+        },
+        {
+         "drawRect": {
+          "left": 0,
+          "top": 0,
+          "right": "windowWidth",
+          "bottom": "windowHeight"
+         }
+        },
+        {
+         "save": {
+          "commands": [
+           {
+            "translate": {
+             "dx": "(windowWidth - 792 * min(windowWidth / 792, windowHeight / 272)) / 2",
+             "dy": "(windowHeight - 272 * min(windowWidth / 792, windowHeight / 272)) / 2"
+            }
+           },
+           {
+            "scale": {
+             "sx": "min(windowWidth / 792, windowHeight / 272)",
+             "sy": "min(windowWidth / 792, windowHeight / 272)"
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Mountain View",
+             "x": 24,
+             "y": 34,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 20
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "5-day forecast  \u00b7  \u00b0F",
+             "x": 768,
+             "y": 34,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 2
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 24,
+             "y1": 54,
+             "x2": 768,
+             "y2": 54
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Thu",
+             "x": 98.4,
+             "y": 84,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 98.4,
+             "cy": 140,
+             "radius": 22
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 127.4,
+             "y1": 140.0,
+             "x2": 136.4,
+             "y2": 140.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 118.90609665440988,
+             "y1": 160.50609665440987,
+             "x2": 125.27005768508882,
+             "y2": 166.8700576850888
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 98.4,
+             "y1": 169.0,
+             "x2": 98.4,
+             "y2": 178.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 77.89390334559013,
+             "y1": 160.50609665440987,
+             "x2": 71.52994231491121,
+             "y2": 166.8700576850888
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 69.4,
+             "y1": 140.0,
+             "x2": 60.400000000000006,
+             "y2": 140.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 77.89390334559012,
+             "y1": 119.49390334559013,
+             "x2": 71.5299423149112,
+             "y2": 113.1299423149112
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 98.4,
+             "y1": 111.0,
+             "x2": 98.4,
+             "y2": 102.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 118.90609665440988,
+             "y1": 119.49390334559011,
+             "x2": 125.2700576850888,
+             "y2": 113.12994231491119
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 34
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "68\u00b0",
+             "x": 92.4,
+             "y": 206,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "51\u00b0",
+             "x": 104.4,
+             "y": 206,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Sunny",
+             "x": 98.4,
+             "y": 242,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 172.8,
+             "y1": 70,
+             "x2": 172.8,
+             "y2": 252
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Fri",
+             "x": 247.20000000000002,
+             "y": 84,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 259.20000000000005,
+             "cy": 130,
+             "radius": 15
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 281.20000000000005,
+             "y1": 130.0,
+             "x2": 290.20000000000005,
+             "y2": 130.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 274.7563491861041,
+             "y1": 145.55634918610406,
+             "x2": 281.120310216783,
+             "y2": 151.92031021678298
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 259.20000000000005,
+             "y1": 152.0,
+             "x2": 259.20000000000005,
+             "y2": 161.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 243.643650813896,
+             "y1": 145.55634918610406,
+             "x2": 237.27968978321707,
+             "y2": 151.92031021678298
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 237.20000000000005,
+             "y1": 130.0,
+             "x2": 228.20000000000005,
+             "y2": 130.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 243.643650813896,
+             "y1": 114.44365081389596,
+             "x2": 237.27968978321707,
+             "y2": 108.07968978321702
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 259.20000000000005,
+             "y1": 108.0,
+             "x2": 259.20000000000005,
+             "y2": 99.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 274.7563491861041,
+             "y1": 114.44365081389596,
+             "x2": 281.120310216783,
+             "y2": 108.07968978321702
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 224.8,
+             "cy": 152.9,
+             "radius": 17.25
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 245.50000000000003,
+             "cy": 139.1,
+             "radius": 23.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 266.20000000000005,
+             "cy": 152.9,
+             "radius": 16.099999999999998
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#FFFFFF"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRect": {
+             "left": 224.8,
+             "top": 152.9,
+             "right": 266.20000000000005,
+             "bottom": 169.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 227.20000000000002,
+             "cy": 152.0,
+             "radius": 15.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 245.20000000000002,
+             "cy": 140.0,
+             "radius": 20.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 263.20000000000005,
+             "cy": 152.0,
+             "radius": 14.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRect": {
+             "left": 227.20000000000002,
+             "top": 152.0,
+             "right": 263.20000000000005,
+             "bottom": 166.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 34
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "64\u00b0",
+             "x": 241.20000000000002,
+             "y": 206,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "50\u00b0",
+             "x": 253.20000000000002,
+             "y": 206,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Some clouds",
+             "x": 247.20000000000002,
+             "y": 242,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 321.6,
+             "y1": 70,
+             "x2": 321.6,
+             "y2": 252
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Sat",
+             "x": 396.0,
+             "y": 84,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 380.0,
+             "cy": 146.0,
+             "radius": 15.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 398.0,
+             "cy": 134.0,
+             "radius": 20.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 416.0,
+             "cy": 146.0,
+             "radius": 14.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRect": {
+             "left": 380.0,
+             "top": 146.0,
+             "right": 416.0,
+             "bottom": 160.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 34
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "59\u00b0",
+             "x": 390.0,
+             "y": 206,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "49\u00b0",
+             "x": 402.0,
+             "y": 206,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Cloudy",
+             "x": 396.0,
+             "y": 242,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 470.40000000000003,
+             "y1": 70,
+             "x2": 470.40000000000003,
+             "y2": 252
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Sun",
+             "x": 544.8000000000001,
+             "y": 84,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 528.8000000000001,
+             "cy": 138.0,
+             "radius": 15.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 546.8000000000001,
+             "cy": 126.0,
+             "radius": 20.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 564.8000000000001,
+             "cy": 138.0,
+             "radius": 14.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawRect": {
+             "left": 528.8000000000001,
+             "top": 138.0,
+             "right": 564.8000000000001,
+             "bottom": 152.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 3
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 530.8000000000001,
+             "y1": 162,
+             "x2": 524.8000000000001,
+             "y2": 176
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 3
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 544.8000000000001,
+             "y1": 162,
+             "x2": 538.8000000000001,
+             "y2": 176
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 3
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 558.8000000000001,
+             "y1": 162,
+             "x2": 552.8000000000001,
+             "y2": 176
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 34
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "56\u00b0",
+             "x": 538.8000000000001,
+             "y": 206,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "47\u00b0",
+             "x": 550.8000000000001,
+             "y": 206,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Showers",
+             "x": 544.8000000000001,
+             "y": 242,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#999999"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 619.2,
+             "y1": 70,
+             "x2": 619.2,
+             "y2": 252
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Mon",
+             "x": 693.6,
+             "y": 84,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 693.6,
+             "cy": 140,
+             "radius": 22
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 722.6,
+             "y1": 140.0,
+             "x2": 731.6,
+             "y2": 140.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 714.10609665441,
+             "y1": 160.50609665440987,
+             "x2": 720.4700576850888,
+             "y2": 166.8700576850888
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 693.6,
+             "y1": 169.0,
+             "x2": 693.6,
+             "y2": 178.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 673.0939033455901,
+             "y1": 160.50609665440987,
+             "x2": 666.7299423149112,
+             "y2": 166.8700576850888
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 664.6,
+             "y1": 140.0,
+             "x2": 655.6,
+             "y2": 140.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 673.0939033455901,
+             "y1": 119.49390334559013,
+             "x2": 666.7299423149112,
+             "y2": 113.1299423149112
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 693.6,
+             "y1": 111.0,
+             "x2": 693.6,
+             "y2": 102.0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 714.1060966544098,
+             "y1": 119.49390334559011,
+             "x2": 720.4700576850888,
+             "y2": 113.12994231491119
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#000000"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 34
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "66\u00b0",
+             "x": 687.6,
+             "y": 206,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 26
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "50\u00b0",
+             "x": 699.6,
+             "y": 206,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "#555555"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 17
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "Clear",
+             "x": 693.6,
+             "y": 242,
+             "panX": 0,
+             "panY": 0
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

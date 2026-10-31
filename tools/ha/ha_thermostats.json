@@ -1,0 +1,2385 @@
+{
+ "header": {
+  "apiLevel": 7,
+  "width": 792,
+  "height": 272,
+  "profiles": 513,
+  "contentDescription": "Home Assistant thermostats"
+ },
+ "root": [
+  {
+   "global": [
+    {
+     "resources": {
+      "variables": [
+       {
+        "name": "ha.online",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.friendly_name",
+        "type": "string",
+        "value": "—",
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.hvac_action",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.fan_mode",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.current_temperature",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.temperature",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.target_temp_low",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.target_temp_high",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.min_temp",
+        "value": 7,
+        "export": true
+       },
+       {
+        "name": "ha.climate.heatpump.max_temp",
+        "value": 35,
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.friendly_name",
+        "type": "string",
+        "value": "—",
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.hvac_action",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.fan_mode",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.current_temperature",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.temperature",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.target_temp_low",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.target_temp_high",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.min_temp",
+        "value": 7,
+        "export": true
+       },
+       {
+        "name": "ha.climate.hvac.max_temp",
+        "value": 35,
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.friendly_name",
+        "type": "string",
+        "value": "—",
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.hvac_action",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.fan_mode",
+        "type": "string",
+        "value": "",
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.current_temperature",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.temperature",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.target_temp_low",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.target_temp_high",
+        "value": 0,
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.min_temp",
+        "value": 7,
+        "export": true
+       },
+       {
+        "name": "ha.climate.ecobee.max_temp",
+        "value": 35,
+        "export": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "box": {
+    "modifiers": [
+     "fillMaxSize"
+    ],
+    "children": [
+     {
+      "canvas": {
+       "modifiers": [
+        "fillMaxSize"
+       ],
+       "commands": [
+        {
+         "paint": {
+          "ops": [
+           {
+            "shader": 0
+           },
+           {
+            "color": "#FFFFFF"
+           },
+           {
+            "style": "fill"
+           },
+           {
+            "alpha": 1.0
+           }
+          ]
+         }
+        },
+        {
+         "drawRect": {
+          "left": 0,
+          "top": 0,
+          "right": "windowWidth",
+          "bottom": "windowHeight"
+         }
+        },
+        {
+         "save": {
+          "commands": [
+           {
+            "translate": {
+             "dx": "(windowWidth - 792 * min(windowWidth / 792, windowHeight / 272)) / 2",
+             "dy": "(windowHeight - 272 * min(windowWidth / 792, windowHeight / 272)) / 2"
+            }
+           },
+           {
+            "scale": {
+             "sx": "min(windowWidth / 792, windowHeight / 272)",
+             "sy": "min(windowWidth / 792, windowHeight / 272)"
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "translate": {
+                "dx": 0.0,
+                "dy": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 6,
+                "right": 258.0,
+                "bottom": 266,
+                "rx": 14,
+                "ry": 14
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 2
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 6,
+                "right": 258.0,
+                "bottom": 266,
+                "rx": 14,
+                "ry": 14
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 24
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.heatpump.friendly_name",
+                "x": 22,
+                "y": 36,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 17
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.heatpump",
+                "x": 242.0,
+                "y": 36,
+                "panX": 1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 2
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawArc": {
+                "left": 62.0,
+                "top": 70,
+                "right": 202.0,
+                "bottom": 210,
+                "startAngle": 135,
+                "sweepAngle": 270
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "gt",
+                "v1": "@ha.climate.heatpump.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "strokeWidth": 12
+                    },
+                    {
+                     "strokeCap": "round"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": 62.0,
+                   "top": 70,
+                   "right": 202.0,
+                   "bottom": 210,
+                   "startAngle": "min((135 + 270 * (max(min(@ha.climate.heatpump.target_temp_low, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)), (135 + 270 * (max(min(@ha.climate.heatpump.target_temp_high, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) - 3)",
+                   "sweepAngle": "max((135 + 270 * (max(min(@ha.climate.heatpump.target_temp_high, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) - (135 + 270 * (max(min(@ha.climate.heatpump.target_temp_low, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)), 6)"
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@ha.climate.heatpump.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "strokeWidth": 12
+                    },
+                    {
+                     "strokeCap": "round"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": 62.0,
+                   "top": 70,
+                   "right": 202.0,
+                   "bottom": 210,
+                   "startAngle": "min((135 + 270 * (max(min(@ha.climate.heatpump.temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)), (135 + 270 * (max(min(@ha.climate.heatpump.temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) - 3)",
+                   "sweepAngle": "max((135 + 270 * (max(min(@ha.climate.heatpump.temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) - (135 + 270 * (max(min(@ha.climate.heatpump.temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)), 6)"
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawCircle": {
+                "cx": "(132.0 + 70 * cos((135 + 270 * (max(min(@ha.climate.heatpump.current_temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) * 0.017453292))",
+                "cy": "(140 + 70 * sin((135 + 270 * (max(min(@ha.climate.heatpump.current_temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) * 0.017453292))",
+                "radius": 10
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 3
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawCircle": {
+                "cx": "(132.0 + 70 * cos((135 + 270 * (max(min(@ha.climate.heatpump.current_temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) * 0.017453292))",
+                "cy": "(140 + 70 * sin((135 + 270 * (max(min(@ha.climate.heatpump.current_temperature, @ha.climate.heatpump.max_temp), @ha.climate.heatpump.min_temp) - @ha.climate.heatpump.min_temp) / max(@ha.climate.heatpump.max_temp - @ha.climate.heatpump.min_temp, 1)) * 0.017453292))",
+                "radius": 10
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 58
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": {
+                 "type": "textFromFloat",
+                 "value": "@ha.climate.heatpump.current_temperature",
+                 "whole": 2,
+                 "decimal": 0
+                },
+                "x": 132.0,
+                "y": 142,
+                "panX": 0,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 34
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "°",
+                "x": 166.0,
+                "y": 128,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 15
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "now",
+                "x": 132.0,
+                "y": 180,
+                "panX": 0,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 18
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "set",
+                "x": 22,
+                "y": 226,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@ha.climate.heatpump.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.heatpump.temperature",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 230.0,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "gt",
+                "v1": "@ha.climate.heatpump.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.heatpump.target_temp_low",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 191.12,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "–",
+                   "x": 199.04,
+                   "y": 226,
+                   "panX": 0,
+                   "panY": 0
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.heatpump.target_temp_high",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 230.0,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 24
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "°",
+                "x": 232.0,
+                "y": 224,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 16
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.heatpump.hvac_action",
+                "x": 22,
+                "y": 252,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 16
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.heatpump.fan_mode",
+                "x": 242.0,
+                "y": 252,
+                "panX": 1,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "translate": {
+                "dx": 264.0,
+                "dy": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 6,
+                "right": 258.0,
+                "bottom": 266,
+                "rx": 14,
+                "ry": 14
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 2
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 6,
+                "right": 258.0,
+                "bottom": 266,
+                "rx": 14,
+                "ry": 14
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 24
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.hvac.friendly_name",
+                "x": 22,
+                "y": 36,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 17
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.hvac",
+                "x": 242.0,
+                "y": 36,
+                "panX": 1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 2
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawArc": {
+                "left": 62.0,
+                "top": 70,
+                "right": 202.0,
+                "bottom": 210,
+                "startAngle": 135,
+                "sweepAngle": 270
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "gt",
+                "v1": "@ha.climate.hvac.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "strokeWidth": 12
+                    },
+                    {
+                     "strokeCap": "round"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": 62.0,
+                   "top": 70,
+                   "right": 202.0,
+                   "bottom": 210,
+                   "startAngle": "min((135 + 270 * (max(min(@ha.climate.hvac.target_temp_low, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)), (135 + 270 * (max(min(@ha.climate.hvac.target_temp_high, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) - 3)",
+                   "sweepAngle": "max((135 + 270 * (max(min(@ha.climate.hvac.target_temp_high, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) - (135 + 270 * (max(min(@ha.climate.hvac.target_temp_low, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)), 6)"
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@ha.climate.hvac.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "strokeWidth": 12
+                    },
+                    {
+                     "strokeCap": "round"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": 62.0,
+                   "top": 70,
+                   "right": 202.0,
+                   "bottom": 210,
+                   "startAngle": "min((135 + 270 * (max(min(@ha.climate.hvac.temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)), (135 + 270 * (max(min(@ha.climate.hvac.temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) - 3)",
+                   "sweepAngle": "max((135 + 270 * (max(min(@ha.climate.hvac.temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) - (135 + 270 * (max(min(@ha.climate.hvac.temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)), 6)"
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawCircle": {
+                "cx": "(132.0 + 70 * cos((135 + 270 * (max(min(@ha.climate.hvac.current_temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) * 0.017453292))",
+                "cy": "(140 + 70 * sin((135 + 270 * (max(min(@ha.climate.hvac.current_temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) * 0.017453292))",
+                "radius": 10
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 3
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawCircle": {
+                "cx": "(132.0 + 70 * cos((135 + 270 * (max(min(@ha.climate.hvac.current_temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) * 0.017453292))",
+                "cy": "(140 + 70 * sin((135 + 270 * (max(min(@ha.climate.hvac.current_temperature, @ha.climate.hvac.max_temp), @ha.climate.hvac.min_temp) - @ha.climate.hvac.min_temp) / max(@ha.climate.hvac.max_temp - @ha.climate.hvac.min_temp, 1)) * 0.017453292))",
+                "radius": 10
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 58
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": {
+                 "type": "textFromFloat",
+                 "value": "@ha.climate.hvac.current_temperature",
+                 "whole": 2,
+                 "decimal": 0
+                },
+                "x": 132.0,
+                "y": 142,
+                "panX": 0,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 34
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "°",
+                "x": 166.0,
+                "y": 128,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 15
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "now",
+                "x": 132.0,
+                "y": 180,
+                "panX": 0,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 18
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "set",
+                "x": 22,
+                "y": 226,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@ha.climate.hvac.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.hvac.temperature",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 230.0,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "gt",
+                "v1": "@ha.climate.hvac.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.hvac.target_temp_low",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 191.12,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "–",
+                   "x": 199.04,
+                   "y": 226,
+                   "panX": 0,
+                   "panY": 0
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.hvac.target_temp_high",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 230.0,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 24
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "°",
+                "x": 232.0,
+                "y": 224,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 16
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.hvac.hvac_action",
+                "x": 22,
+                "y": 252,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 16
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.hvac.fan_mode",
+                "x": 242.0,
+                "y": 252,
+                "panX": 1,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "translate": {
+                "dx": 528.0,
+                "dy": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 6,
+                "right": 258.0,
+                "bottom": 266,
+                "rx": 14,
+                "ry": 14
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 2
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 6,
+                "top": 6,
+                "right": 258.0,
+                "bottom": 266,
+                "rx": 14,
+                "ry": 14
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 24
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.ecobee.friendly_name",
+                "x": 22,
+                "y": 36,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 17
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.ecobee",
+                "x": 242.0,
+                "y": 36,
+                "panX": 1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 2
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawArc": {
+                "left": 62.0,
+                "top": 70,
+                "right": 202.0,
+                "bottom": 210,
+                "startAngle": 135,
+                "sweepAngle": 270
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "gt",
+                "v1": "@ha.climate.ecobee.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "strokeWidth": 12
+                    },
+                    {
+                     "strokeCap": "round"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": 62.0,
+                   "top": 70,
+                   "right": 202.0,
+                   "bottom": 210,
+                   "startAngle": "min((135 + 270 * (max(min(@ha.climate.ecobee.target_temp_low, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)), (135 + 270 * (max(min(@ha.climate.ecobee.target_temp_high, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) - 3)",
+                   "sweepAngle": "max((135 + 270 * (max(min(@ha.climate.ecobee.target_temp_high, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) - (135 + 270 * (max(min(@ha.climate.ecobee.target_temp_low, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)), 6)"
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@ha.climate.ecobee.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "stroke"
+                    },
+                    {
+                     "strokeWidth": 12
+                    },
+                    {
+                     "strokeCap": "round"
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawArc": {
+                   "left": 62.0,
+                   "top": 70,
+                   "right": 202.0,
+                   "bottom": 210,
+                   "startAngle": "min((135 + 270 * (max(min(@ha.climate.ecobee.temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)), (135 + 270 * (max(min(@ha.climate.ecobee.temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) - 3)",
+                   "sweepAngle": "max((135 + 270 * (max(min(@ha.climate.ecobee.temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) - (135 + 270 * (max(min(@ha.climate.ecobee.temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)), 6)"
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawCircle": {
+                "cx": "(132.0 + 70 * cos((135 + 270 * (max(min(@ha.climate.ecobee.current_temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) * 0.017453292))",
+                "cy": "(140 + 70 * sin((135 + 270 * (max(min(@ha.climate.ecobee.current_temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) * 0.017453292))",
+                "radius": 10
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 3
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawCircle": {
+                "cx": "(132.0 + 70 * cos((135 + 270 * (max(min(@ha.climate.ecobee.current_temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) * 0.017453292))",
+                "cy": "(140 + 70 * sin((135 + 270 * (max(min(@ha.climate.ecobee.current_temperature, @ha.climate.ecobee.max_temp), @ha.climate.ecobee.min_temp) - @ha.climate.ecobee.min_temp) / max(@ha.climate.ecobee.max_temp - @ha.climate.ecobee.min_temp, 1)) * 0.017453292))",
+                "radius": 10
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 58
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": {
+                 "type": "textFromFloat",
+                 "value": "@ha.climate.ecobee.current_temperature",
+                 "whole": 2,
+                 "decimal": 0
+                },
+                "x": 132.0,
+                "y": 142,
+                "panX": 0,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 34
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "°",
+                "x": 166.0,
+                "y": 128,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 15
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "now",
+                "x": 132.0,
+                "y": 180,
+                "panX": 0,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 18
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "set",
+                "x": 22,
+                "y": 226,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "eq",
+                "v1": "@ha.climate.ecobee.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.ecobee.temperature",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 230.0,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "conditionalOperations": {
+                "condition": "gt",
+                "v1": "@ha.climate.ecobee.target_temp_low",
+                "v2": 0,
+                "commands": [
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.ecobee.target_temp_low",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 191.12,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": "–",
+                   "x": 199.04,
+                   "y": 226,
+                   "panX": 0,
+                   "panY": 0
+                  }
+                 },
+                 {
+                  "paint": {
+                   "ops": [
+                    {
+                     "shader": 0
+                    },
+                    {
+                     "color": "#000000"
+                    },
+                    {
+                     "style": "fill"
+                    },
+                    {
+                     "textSize": 24
+                    },
+                    {
+                     "alpha": 1.0
+                    }
+                   ]
+                  }
+                 },
+                 {
+                  "drawTextAnchored": {
+                   "text": {
+                    "type": "textFromFloat",
+                    "value": "@ha.climate.ecobee.target_temp_high",
+                    "whole": 2,
+                    "decimal": 0
+                   },
+                   "x": 230.0,
+                   "y": 226,
+                   "panX": 1,
+                   "panY": 0
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 24
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "°",
+                "x": 232.0,
+                "y": 224,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 16
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.ecobee.hvac_action",
+                "x": 22,
+                "y": 252,
+                "panX": -1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#555555"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 16
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@ha.climate.ecobee.fan_mode",
+                "x": 242.0,
+                "y": 252,
+                "panX": 1,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           },
+           {
+            "conditionalOperations": {
+             "condition": "eq",
+             "v1": "@ha.online",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#FFFFFF"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 225.72,
+                "top": 110.16,
+                "right": 566.28,
+                "bottom": 161.84,
+                "rx": 16.0,
+                "ry": 16.0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 3
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawRoundRect": {
+                "left": 225.72,
+                "top": 110.16,
+                "right": 566.28,
+                "bottom": 161.84,
+                "rx": 16.0,
+                "ry": 16.0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "#000000"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 22
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "Waiting for Home Assistant…",
+                "x": 396.0,
+                "y": 136.0,
+                "panX": 0,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

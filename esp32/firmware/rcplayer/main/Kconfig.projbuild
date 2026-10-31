@@ -1,0 +1,28 @@
+menu "RC player"
+
+config RCPLAYER_DEVICE_NAME
+    string "Device name (mDNS host and rcNet name)"
+    default "tab5"
+
+config RCPLAYER_WIFI_SSID
+    string "Wi-Fi SSID (optional; can also be set over serial with 'wifi SSID PASS')"
+    default ""
+
+config RCPLAYER_WIFI_PASSWORD
+    string "Wi-Fi password"
+    default ""
+
+config RCPLAYER_RCNET_PORT
+    int "rcNet receiver port"
+    default 8937
+
+config RCPLAYER_DOCUMENTS
+    string "Embedded documents (names, space-separated; empty: all)"
+    default ""
+    help
+        Only these documents are built in, in this order (the first is shown at start).
+        Names are looked up in documents/, documents/fit/, documents/system/ and
+        documents/wide/ (which is embedded only when named here). Empty: every document
+        in the first three, as before.
+
+endmenu

@@ -1,0 +1,15 @@
+dependencies:
+  idf: ">=6.0"
+  # The board's BSP and display/touch drivers come with boards/<BOARD>/components.
+  # A chip without its own radio (the P4) reaches a co-processor (the Tab5's C6) over SDIO.
+  espressif/esp_hosted:
+    version: "^3"
+    rules:
+      - if: "target in [esp32p4]"
+  espressif/esp_wifi_remote:
+    version: "^1"
+    rules:
+      - if: "target in [esp32p4]"
+  espressif/mdns: "^1"
+  # JSON for the Home Assistant client (ha.cpp); IDF 6 no longer bundles cJSON.
+  espressif/cjson: "^1"

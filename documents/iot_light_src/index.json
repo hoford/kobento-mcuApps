@@ -1,0 +1,402 @@
+[
+ {
+  "name": "01-smart-bulb",
+  "title": "01 smart bulb",
+  "description": "Smart Bulb \u2014 warm white \u00b7 82%"
+ },
+ {
+  "name": "02-led-strip",
+  "title": "02 led strip",
+  "description": "LED Light Strip \u2014 chase \u00b7 60 fps"
+ },
+ {
+  "name": "03-dimmer-switch",
+  "title": "03 dimmer switch",
+  "description": "Dimmer Switch \u2014 rotary \u00b7 scene 2"
+ },
+ {
+  "name": "04-motion-night-light",
+  "title": "04 motion night light",
+  "description": "Motion Night Light \u2014 PIR \u00b7 auto-on"
+ },
+ {
+  "name": "05-mood-lamp",
+  "title": "05 mood lamp",
+  "description": "Mood Lamp \u2014 colour cycle \u00b7 12s"
+ },
+ {
+  "name": "06-thermostat",
+  "title": "06 thermostat",
+  "description": "Smart Thermostat \u2014 heating \u00b7 target 22\u00b0"
+ },
+ {
+  "name": "07-radiator-valve",
+  "title": "07 radiator valve",
+  "description": "Radiator Valve \u2014 TRV \u00b7 opening to 60%"
+ },
+ {
+  "name": "08-air-purifier",
+  "title": "08 air purifier",
+  "description": "Air Purifier \u2014 HEPA \u00b7 auto \u00b7 PM2.5 12"
+ },
+ {
+  "name": "09-humidifier",
+  "title": "09 humidifier",
+  "description": "Humidifier \u2014 ultrasonic \u00b7 48% RH"
+ },
+ {
+  "name": "10-ceiling-fan",
+  "title": "10 ceiling fan",
+  "description": "Ceiling Fan \u2014 speed 3 \u00b7 reverse off"
+ },
+ {
+  "name": "11-video-doorbell",
+  "title": "11 video doorbell",
+  "description": "Video Doorbell \u2014 1440p \u00b7 chime \u00b7 motion"
+ },
+ {
+  "name": "12-security-camera",
+  "title": "12 security camera",
+  "description": "Security Camera \u2014 PTZ \u00b7 night vision \u00b7 REC"
+ },
+ {
+  "name": "13-smart-lock",
+  "title": "13 smart lock",
+  "description": "Smart Lock \u2014 deadbolt \u00b7 auto-lock 30s"
+ },
+ {
+  "name": "14-motion-sensor",
+  "title": "14 motion sensor",
+  "description": "Motion Sensor \u2014 PIR \u00b7 7 zones \u00b7 12m"
+ },
+ {
+  "name": "15-contact-sensor",
+  "title": "15 contact sensor",
+  "description": "Door/Window Sensor \u2014 reed contact \u00b7 open"
+ },
+ {
+  "name": "16-smoke-alarm",
+  "title": "16 smoke alarm",
+  "description": "Smoke Alarm \u2014 photoelectric \u00b7 alarm"
+ },
+ {
+  "name": "17-co-detector",
+  "title": "17 co detector",
+  "description": "CO Detector \u2014 electrochemical \u00b7 ppm"
+ },
+ {
+  "name": "18-water-leak",
+  "title": "18 water leak",
+  "description": "Water Leak Sensor \u2014 probe pair \u00b7 alarm"
+ },
+ {
+  "name": "19-glass-break",
+  "title": "19 glass break",
+  "description": "Glass-Break Sensor \u2014 acoustic \u00b7 dual-stage"
+ },
+ {
+  "name": "20-siren-keypad",
+  "title": "20 siren keypad",
+  "description": "Siren Keypad \u2014 entry delay \u00b7 arming"
+ },
+ {
+  "name": "21-smart-fridge",
+  "title": "21 smart fridge",
+  "description": "Smart Fridge \u2014 3\u00b0C \u00b7 door closed"
+ },
+ {
+  "name": "22-smart-oven",
+  "title": "22 smart oven",
+  "description": "Smart Oven \u2014 fan bake \u00b7 190\u00b0C"
+ },
+ {
+  "name": "23-coffee-maker",
+  "title": "23 coffee maker",
+  "description": "Coffee Maker \u2014 brewing \u00b7 4 cups"
+ },
+ {
+  "name": "24-smart-kettle",
+  "title": "24 smart kettle",
+  "description": "Smart Kettle \u2014 heating \u00b7 88\u00b0C"
+ },
+ {
+  "name": "25-dishwasher",
+  "title": "25 dishwasher",
+  "description": "Dishwasher \u2014 eco 50\u00b0 \u00b7 42 min"
+ },
+ {
+  "name": "26-microwave",
+  "title": "26 microwave",
+  "description": "Microwave \u2014 900W \u00b7 2:30 remaining"
+ },
+ {
+  "name": "27-sous-vide",
+  "title": "27 sous vide",
+  "description": "Sous-Vide \u2014 circulator \u00b7 56.5\u00b0C"
+ },
+ {
+  "name": "28-kitchen-scale",
+  "title": "28 kitchen scale",
+  "description": "Kitchen Scale \u2014 tare \u00b7 grams"
+ },
+ {
+  "name": "29-toaster",
+  "title": "29 toaster",
+  "description": "Toaster \u2014 medium \u00b7 2 slice"
+ },
+ {
+  "name": "30-wine-fridge",
+  "title": "30 wine fridge",
+  "description": "Wine Fridge \u2014 cellar \u00b7 12\u00b0C \u00b7 18 bottles"
+ },
+ {
+  "name": "31-robot-vacuum",
+  "title": "31 robot vacuum",
+  "description": "Robot Vacuum \u2014 mapping \u00b7 5 passes"
+ },
+ {
+  "name": "32-robot-mop",
+  "title": "32 robot mop",
+  "description": "Robot Mop \u2014 wet pass \u00b7 tank 60%"
+ },
+ {
+  "name": "33-washing-machine",
+  "title": "33 washing machine",
+  "description": "Washing Machine \u2014 cottons 40\u00b0 \u00b7 spin"
+ },
+ {
+  "name": "34-tumble-dryer",
+  "title": "34 tumble dryer",
+  "description": "Tumble Dryer \u2014 heat pump \u00b7 46 min"
+ },
+ {
+  "name": "35-trash-compactor",
+  "title": "35 trash compactor",
+  "description": "Trash Compactor \u2014 4:1 \u00b7 ram down"
+ },
+ {
+  "name": "36-smart-plug",
+  "title": "36 smart plug",
+  "description": "Smart Plug \u2014 relay \u00b7 metering"
+ },
+ {
+  "name": "37-energy-monitor",
+  "title": "37 energy monitor",
+  "description": "Energy Monitor \u2014 whole home \u00b7 live"
+ },
+ {
+  "name": "38-solar-inverter",
+  "title": "38 solar inverter",
+  "description": "Solar Inverter \u2014 string \u00b7 MPPT"
+ },
+ {
+  "name": "39-home-battery",
+  "title": "39 home battery",
+  "description": "Home Battery \u2014 13.5 kWh \u00b7 cycling"
+ },
+ {
+  "name": "40-ev-charger",
+  "title": "40 ev charger",
+  "description": "EV Charger \u2014 7.4 kW \u00b7 62%"
+ },
+ {
+  "name": "41-sprinkler",
+  "title": "41 sprinkler",
+  "description": "Sprinkler Controller \u2014 6 zones \u00b7 zone 3 live"
+ },
+ {
+  "name": "42-soil-moisture",
+  "title": "42 soil moisture",
+  "description": "Soil Moisture Sensor \u2014 VWC \u00b7 capacitive"
+ },
+ {
+  "name": "43-hose-valve",
+  "title": "43 hose valve",
+  "description": "Hose Valve \u2014 flow \u00b7 9.2 L/min"
+ },
+ {
+  "name": "44-pool-monitor",
+  "title": "44 pool monitor",
+  "description": "Pool Monitor \u2014 pH 7.4 \u00b7 27.4\u00b0C"
+ },
+ {
+  "name": "45-rain-sensor",
+  "title": "45 rain sensor",
+  "description": "Rain Sensor \u2014 tipping bucket \u00b7 mm"
+ },
+ {
+  "name": "46-smart-speaker",
+  "title": "46 smart speaker",
+  "description": "Smart Speaker \u2014 listening \u00b7 far-field"
+ },
+ {
+  "name": "47-smart-display",
+  "title": "47 smart display",
+  "description": "Smart Display \u2014 ambient \u00b7 7in"
+ },
+ {
+  "name": "48-smart-tv",
+  "title": "48 smart tv",
+  "description": "Smart TV \u2014 4K HDR \u00b7 playing"
+ },
+ {
+  "name": "49-streaming-box",
+  "title": "49 streaming box",
+  "description": "Streaming Box \u2014 buffering \u00b7 adaptive"
+ },
+ {
+  "name": "50-projector",
+  "title": "50 projector",
+  "description": "Projector \u2014 lamp 78% \u00b7 1080p"
+ },
+ {
+  "name": "51-mesh-router",
+  "title": "51 mesh router",
+  "description": "Mesh Router \u2014 Wi-Fi 6E \u00b7 12 clients"
+ },
+ {
+  "name": "52-range-extender",
+  "title": "52 range extender",
+  "description": "Range Extender \u2014 repeater \u00b7 5 GHz"
+ },
+ {
+  "name": "53-smart-hub",
+  "title": "53 smart hub",
+  "description": "Smart Hub \u2014 Thread \u00b7 24 paired"
+ },
+ {
+  "name": "54-network-switch",
+  "title": "54 network switch",
+  "description": "Network Switch \u2014 8-port gigabit \u00b7 PoE"
+ },
+ {
+  "name": "55-doorbell-chime",
+  "title": "55 doorbell chime",
+  "description": "Doorbell Chime \u2014 two-tone \u00b7 indoor"
+ },
+ {
+  "name": "56-smart-blinds",
+  "title": "56 smart blinds",
+  "description": "Smart Blinds \u2014 tilt 60\u00b0 \u00b7 lift 30%"
+ },
+ {
+  "name": "57-smart-curtains",
+  "title": "57 smart curtains",
+  "description": "Smart Curtains \u2014 track \u00b7 70% open"
+ },
+ {
+  "name": "58-garage-door",
+  "title": "58 garage door",
+  "description": "Garage Door \u2014 sectional \u00b7 opening"
+ },
+ {
+  "name": "59-window-opener",
+  "title": "59 window opener",
+  "description": "Window Opener \u2014 chain actuator \u00b7 40%"
+ },
+ {
+  "name": "60-gate-opener",
+  "title": "60 gate opener",
+  "description": "Gate Opener \u2014 rack & pinion \u00b7 sliding"
+ },
+ {
+  "name": "61-body-scale",
+  "title": "61 body scale",
+  "description": "Body Scale \u2014 bio-impedance \u00b7 settling"
+ },
+ {
+  "name": "62-sleep-tracker",
+  "title": "62 sleep tracker",
+  "description": "Sleep Tracker \u2014 hypnogram \u00b7 6h 42m"
+ },
+ {
+  "name": "63-smart-mattress",
+  "title": "63 smart mattress",
+  "description": "Smart Mattress \u2014 zones \u00b7 dual climate"
+ },
+ {
+  "name": "64-air-quality",
+  "title": "64 air quality",
+  "description": "Air Quality Monitor \u2014 PM2.5 \u00b7 laser"
+ },
+ {
+  "name": "65-smart-mirror",
+  "title": "65 smart mirror",
+  "description": "Smart Mirror \u2014 presence \u00b7 widgets"
+ },
+ {
+  "name": "66-pet-feeder",
+  "title": "66 pet feeder",
+  "description": "Pet Feeder \u2014 auger \u00b7 1 portion"
+ },
+ {
+  "name": "67-water-fountain",
+  "title": "67 water fountain",
+  "description": "Water Fountain \u2014 circulating \u00b7 filtered"
+ },
+ {
+  "name": "68-pet-camera",
+  "title": "68 pet camera",
+  "description": "Pet Camera \u2014 1080p \u00b7 treat toss"
+ },
+ {
+  "name": "69-litter-box",
+  "title": "69 litter box",
+  "description": "Litter Box \u2014 rake cycle \u00b7 drawer"
+ },
+ {
+  "name": "70-pet-door",
+  "title": "70 pet door",
+  "description": "Pet Door \u2014 microchip \u00b7 unlocked"
+ },
+ {
+  "name": "71-aroma-diffuser",
+  "title": "71 aroma diffuser",
+  "description": "Aroma Diffuser \u2014 ultrasonic \u00b7 4h"
+ },
+ {
+  "name": "72-alarm-clock",
+  "title": "72 alarm clock",
+  "description": "Alarm Clock \u2014 sunrise \u00b7 alarm 07:00"
+ },
+ {
+  "name": "73-weather-station",
+  "title": "73 weather station",
+  "description": "Weather Station \u2014 anemometer \u00b7 vane"
+ },
+ {
+  "name": "74-smart-planter",
+  "title": "74 smart planter",
+  "description": "Smart Planter \u2014 self-watering \u00b7 grow light"
+ },
+ {
+  "name": "75-aquarium",
+  "title": "75 aquarium",
+  "description": "Aquarium Controller \u2014 26.5\u00b0C \u00b7 day cycle"
+ },
+ {
+  "name": "76-baby-monitor",
+  "title": "76 baby monitor",
+  "description": "Baby Monitor \u2014 night vision \u00b7 20.4\u00b0C"
+ },
+ {
+  "name": "77-mailbox-sensor",
+  "title": "77 mailbox sensor",
+  "description": "Mailbox Sensor \u2014 post detected \u00b7 flag up"
+ },
+ {
+  "name": "78-smart-vent",
+  "title": "78 smart vent",
+  "description": "Smart Vent \u2014 zone 4 \u00b7 62% open"
+ },
+ {
+  "name": "79-bird-feeder",
+  "title": "79 bird feeder",
+  "description": "Bird Feeder \u2014 camera \u00b7 species ID"
+ },
+ {
+  "name": "80-smart-bin",
+  "title": "80 smart bin",
+  "description": "Smart Bin \u2014 proximity lid \u00b7 64% full"
+ }
+]

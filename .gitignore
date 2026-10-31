@@ -1,0 +1,14 @@
+# build outputs (any app, any depth)
+**/build/
+**/build-*/
+**/managed_components/
+**/dependencies.lock
+**/sdkconfig
+**/sdkconfig.old
+**/*.log
+
+# local secrets (Wi-Fi, Muse SDK token)
+**/sdkconfig.secrets
+
+.DS_Store
+__pycache__/

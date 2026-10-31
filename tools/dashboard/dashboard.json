@@ -1,0 +1,4036 @@
+{
+ "comment": [
+  "Dashboard: a clock (local time, plus an hour hand for a second city, orange by day and",
+  "blue at night) above weather and a stock quote. Laid out at 360 x 640 dp and scaled to",
+  "fit any window.",
+  "",
+  "To make a new one: copy this file and edit the values under root > global > resources >",
+  "variables. Each has a 'comment' saying what it is. Strings are drawn exactly as written;",
+  "the numbers (stock_change, city2_*) feed expressions.",
+  "Colours are under 'colors' (#AARRGGBB): bg, face, the hands, ink/dim/faint for text,",
+  "up/down for the stock change.",
+  "",
+  "Live updates: the variables are exported, so a host can change them while the document",
+  "shows, without sending it again.",
+  "",
+  "Rules: set textSize before every text drawing (paint state carries over; without it all",
+  "text is the player's default size). Use glyphs the players' font (Roboto) has: ↑ ↓ ° ·",
+  "work, ▲ ▼ draw nothing. For time use timeInMin (minutes since local midnight) and",
+  "offsetToUtc (seconds). Don't use timeInSec: the screen would redraw every second."
+ ],
+ "header": {
+  "apiLevel": 7,
+  "width": 360,
+  "height": 640,
+  "profiles": 513,
+  "contentDescription": "Clock, weather and a stock"
+ },
+ "root": [
+  {
+   "global": [
+    {
+     "resources": {
+      "variables": [
+       {
+        "name": "temp",
+        "type": "string",
+        "value": "59°",
+        "export": true,
+        "comment": "Current temperature, drawn large; include the unit sign."
+       },
+       {
+        "name": "weather",
+        "type": "string",
+        "value": "Mostly Cloudy",
+        "export": true,
+        "comment": "Conditions, under the temperature."
+       },
+       {
+        "name": "high",
+        "type": "string",
+        "value": "66°",
+        "export": true,
+        "comment": "Today's high (HIGH column)."
+       },
+       {
+        "name": "low",
+        "type": "string",
+        "value": "51°",
+        "export": true,
+        "comment": "Today's low (LOW column)."
+       },
+       {
+        "name": "location",
+        "type": "string",
+        "value": "Mountain View, CA",
+        "export": true,
+        "comment": "Place name, under high and low."
+       },
+       {
+        "name": "sunrise",
+        "type": "string",
+        "value": "7:20 AM",
+        "export": true,
+        "comment": "Sunrise time, as it should read."
+       },
+       {
+        "name": "sunset",
+        "type": "string",
+        "value": "6:25 PM",
+        "export": true,
+        "comment": "Sunset time, as it should read."
+       },
+       {
+        "name": "stock_name",
+        "type": "string",
+        "value": "NASDAQ",
+        "export": true,
+        "comment": "Index or ticker name."
+       },
+       {
+        "name": "stock_value",
+        "type": "string",
+        "value": "26,430.89",
+        "export": true,
+        "comment": "Its value, formatted as it should read."
+       },
+       {
+        "name": "stock_change",
+        "value": 1.11,
+        "export": true,
+        "comment": "Change in percent, a number: >= 0 shows a green up arrow, < 0 a red down arrow."
+       },
+       {
+        "name": "stock_date",
+        "type": "string",
+        "value": "Mon Oct 19",
+        "export": true,
+        "comment": "Date of the quote."
+       },
+       {
+        "name": "city2_name",
+        "type": "string",
+        "value": "Beijing",
+        "export": true,
+        "comment": "Name under the clock centre for the extra hour hand."
+       },
+       {
+        "name": "city2_utc_offset",
+        "value": 8,
+        "export": true,
+        "comment": "That city's offset from UTC, in hours (8 = Beijing)."
+       },
+       {
+        "name": "city2_day_start",
+        "value": 6,
+        "export": true,
+        "comment": "Hour (0-23) its hand turns orange (day)."
+       },
+       {
+        "name": "city2_day_end",
+        "value": 18,
+        "export": true,
+        "comment": "Hour (0-23) its hand turns blue (night)."
+       },
+       {
+        "name": "city2_min",
+        "value": "(timeInMin - offsetToUtc / 60 + city2_utc_offset * 60 + 2880) % 1440",
+        "comment": "Derived from the time; don't edit."
+       },
+       {
+        "name": "city2_hour",
+        "value": "floor(city2_min / 60)",
+        "comment": "Derived from the time; don't edit."
+       },
+       {
+        "name": "city2_is_day",
+        "value": "min(max(city2_hour - city2_day_start + 1, 0), 1) * min(max(city2_day_end - city2_hour, 0), 1)",
+        "comment": "Derived from the time; don't edit."
+       }
+      ],
+      "colors": [
+       {
+        "bg": "#FF0B0E14"
+       },
+       {
+        "face": "#FF161A22"
+       },
+       {
+        "face_edge": "#FF2A3040"
+       },
+       {
+        "tick": "#FF5A6376"
+       },
+       {
+        "tick_hour": "#FFC7CDD8"
+       },
+       {
+        "hand": "#FFFFFFFF"
+       },
+       {
+        "city2_day": "#FFFF9F0A"
+       },
+       {
+        "city2_night": "#FF2F7FD0"
+       },
+       {
+        "ink": "#FFFFFFFF"
+       },
+       {
+        "dim": "#FF8A94A6"
+       },
+       {
+        "faint": "#FF5A6376"
+       },
+       {
+        "rule": "#FF1A2230"
+       },
+       {
+        "up": "#FF22C55E"
+       },
+       {
+        "down": "#FFEF4444"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "box": {
+    "modifiers": [
+     "fillMaxSize"
+    ],
+    "children": [
+     {
+      "canvas": {
+       "modifiers": [
+        "fillMaxSize"
+       ],
+       "commands": [
+        {
+         "paint": {
+          "ops": [
+           {
+            "shader": 0
+           },
+           {
+            "color": "$colors.bg"
+           },
+           {
+            "style": "fill"
+           },
+           {
+            "alpha": 1.0
+           }
+          ]
+         }
+        },
+        {
+         "drawRect": {
+          "left": 0,
+          "top": 0,
+          "right": "windowWidth",
+          "bottom": "windowHeight"
+         }
+        },
+        {
+         "save": {
+          "commands": [
+           {
+            "translate": {
+             "dx": "(windowWidth - 360 * min(windowWidth / 360, windowHeight / 640)) / 2",
+             "dy": "(windowHeight - 640 * min(windowWidth / 360, windowHeight / 640)) / 2"
+            }
+           },
+           {
+            "scale": {
+             "sx": "min(windowWidth / 360, windowHeight / 640)",
+             "sy": "min(windowWidth / 360, windowHeight / 640)"
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.face"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 180,
+             "cy": 150,
+             "radius": 128
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.face_edge"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 3
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 180,
+             "cy": 150,
+             "radius": 128
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 0,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 6,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 12,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 18,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 24,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 30,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 36,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 42,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 48,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 54,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 60,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 66,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 72,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 78,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 84,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 90,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 96,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 102,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 108,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 114,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 120,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 126,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 132,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 138,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 144,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 150,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 156,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 162,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 168,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 174,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 180,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 186,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 192,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 198,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 204,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 210,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 216,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 222,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 228,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 234,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 240,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 246,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 252,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 258,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 264,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 270,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 276,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 282,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 288,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 294,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 300,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 306,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 312,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 318,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 324,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick_hour"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 4
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 330,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 46
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 336,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 342,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 348,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.tick"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1.5
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": 354,
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 30,
+                "x2": 180,
+                "y2": 37
+               }
+              }
+             ]
+            }
+           },
+           {
+            "conditionalOperations": {
+             "condition": "eq",
+             "v1": "city2_is_day",
+             "v2": 1,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.city2_day"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@city2_name",
+                "x": 180,
+                "y": 202,
+                "panX": 0,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           },
+           {
+            "conditionalOperations": {
+             "condition": "ne",
+             "v1": "city2_is_day",
+             "v2": 1,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.city2_night"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "@city2_name",
+                "x": 180,
+                "y": 202,
+                "panX": 0,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           },
+           {
+            "conditionalOperations": {
+             "condition": "eq",
+             "v1": "city2_is_day",
+             "v2": 1,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.city2_day"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 5
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "save": {
+                "commands": [
+                 {
+                  "rotate": {
+                   "angle": "(city2_min % 720) / 2",
+                   "pivotX": 180,
+                   "pivotY": 150
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": 180,
+                   "y1": 150,
+                   "x2": 180,
+                   "y2": 88
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           },
+           {
+            "conditionalOperations": {
+             "condition": "ne",
+             "v1": "city2_is_day",
+             "v2": 1,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.city2_night"
+                 },
+                 {
+                  "style": "stroke"
+                 },
+                 {
+                  "strokeWidth": 5
+                 },
+                 {
+                  "strokeCap": "round"
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "save": {
+                "commands": [
+                 {
+                  "rotate": {
+                   "angle": "(city2_min % 720) / 2",
+                   "pivotX": 180,
+                   "pivotY": 150
+                  }
+                 },
+                 {
+                  "drawLine": {
+                   "x1": 180,
+                   "y1": 150,
+                   "x2": 180,
+                   "y2": 88
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.hand"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 9
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": "(timeInMin % 720) / 2",
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 164,
+                "x2": 180,
+                "y2": 80
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.hand"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 6
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "save": {
+             "commands": [
+              {
+               "rotate": {
+                "angle": "(timeInMin % 60) * 6",
+                "pivotX": 180,
+                "pivotY": 150
+               }
+              },
+              {
+               "drawLine": {
+                "x1": 180,
+                "y1": 166,
+                "x2": 180,
+                "y2": 42
+               }
+              }
+             ]
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.hand"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 180,
+             "cy": 150,
+             "radius": 6
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.face"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawCircle": {
+             "cx": 180,
+             "cy": 150,
+             "radius": 2.5
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.rule"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 28,
+             "y1": 300,
+             "x2": 332,
+             "y2": 300
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.ink"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 72
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@temp",
+             "x": 180,
+             "y": 376,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.ink"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@weather",
+             "x": 180,
+             "y": 424,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.dim"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 11
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "HIGH",
+             "x": 120,
+             "y": 452,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.ink"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 24
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@high",
+             "x": 120,
+             "y": 478,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.dim"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 11
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "LOW",
+             "x": 240,
+             "y": 452,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.ink"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 24
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@low",
+             "x": 240,
+             "y": 478,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.dim"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 15
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@location",
+             "x": 180,
+             "y": 508,
+             "panX": 0,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.dim"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 11
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "SUNRISE",
+             "x": 28,
+             "y": 540,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.ink"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 18
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@sunrise",
+             "x": 28,
+             "y": 562,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.dim"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 11
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "SUNSET",
+             "x": 332,
+             "y": 540,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.ink"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 18
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@sunset",
+             "x": 332,
+             "y": 562,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.rule"
+              },
+              {
+               "style": "stroke"
+              },
+              {
+               "strokeWidth": 1
+              },
+              {
+               "strokeCap": "round"
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawLine": {
+             "x1": 28,
+             "y1": 580,
+             "x2": 332,
+             "y2": 580
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.dim"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 16
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@stock_name",
+             "x": 28,
+             "y": 606,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.ink"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 22
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@stock_value",
+             "x": 332,
+             "y": 606,
+             "panX": 1,
+             "panY": 0
+            }
+           },
+           {
+            "paint": {
+             "ops": [
+              {
+               "shader": 0
+              },
+              {
+               "color": "$colors.faint"
+              },
+              {
+               "style": "fill"
+              },
+              {
+               "textSize": 12
+              },
+              {
+               "alpha": 1.0
+              }
+             ]
+            }
+           },
+           {
+            "drawTextAnchored": {
+             "text": "@stock_date",
+             "x": 28,
+             "y": 628,
+             "panX": -1,
+             "panY": 0
+            }
+           },
+           {
+            "conditionalOperations": {
+             "condition": "ge",
+             "v1": "stock_change",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.up"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "%",
+                "x": 332,
+                "y": 628,
+                "panX": 1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.up"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": {
+                 "type": "textFromFloat",
+                 "value": "abs(stock_change)",
+                 "whole": 3,
+                 "decimal": 2
+                },
+                "x": 318,
+                "y": 628,
+                "panX": 1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.up"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "↑",
+                "x": 270,
+                "y": 628,
+                "panX": 1,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           },
+           {
+            "conditionalOperations": {
+             "condition": "lt",
+             "v1": "stock_change",
+             "v2": 0,
+             "commands": [
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.down"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "%",
+                "x": 332,
+                "y": 628,
+                "panX": 1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.down"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": {
+                 "type": "textFromFloat",
+                 "value": "abs(stock_change)",
+                 "whole": 3,
+                 "decimal": 2
+                },
+                "x": 318,
+                "y": 628,
+                "panX": 1,
+                "panY": 0
+               }
+              },
+              {
+               "paint": {
+                "ops": [
+                 {
+                  "shader": 0
+                 },
+                 {
+                  "color": "$colors.down"
+                 },
+                 {
+                  "style": "fill"
+                 },
+                 {
+                  "textSize": 14
+                 },
+                 {
+                  "alpha": 1.0
+                 }
+                ]
+               }
+              },
+              {
+               "drawTextAnchored": {
+                "text": "↓",
+                "x": 270,
+                "y": 628,
+                "panX": 1,
+                "panY": 0
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
