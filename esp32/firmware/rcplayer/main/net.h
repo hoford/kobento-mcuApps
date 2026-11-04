@@ -1,12 +1,13 @@
-// Wi-Fi (on-chip, or through the Tab5's ESP32-C6 co-processor) + an rcNet-compatible receiver.
+// Wi-Fi (on-chip, or through the Tab5's ESP32-C6 co-processor) + a kobento-net receiver.
 //
-// rcNet protocol (Origami2/rcNet, PROTOCOL_VERSION 1), so its send.py / iOS / Android
-// senders work unchanged:
-//   mDNS  _rcnet._tcp  TXT version=1, name=<device>
+// kobento-net protocol v1 (formerly rcNet / Origami2; the wire is unchanged, so existing
+// senders keep working):
+//   mDNS  _kobento._tcp  TXT v=1, name=<device>   (also _rcnet._tcp, for legacy discovery)
 //   GET  /info   -> {"name": "...", "version": 1}
 //   POST /send   headers X-Filename, X-Filesize; body = the file -> {"status":"ok",...}
-// and, outside rcNet, POST /named: "name=value" lines that set the documents' named
-// variables (how Home Assistant pushes to the display, docs/RC_SYSTEM_VARIABLES.md).
+//   POST /named  "name=value" lines that set the documents' named variables (how Home
+//                Assistant pushes to the display, docs/RC_SYSTEM_VARIABLES.md).
+// See the kobento-net repo (PROTOCOL.md) for the full spec.
 #pragma once
 #include <cstdint>
 #include <string>

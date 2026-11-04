@@ -11,6 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# Modified for Kobento from the Muse Gadget SDK's partitions.csv.
 
 # Name,    Type, SubType, Offset,   Size,    Flags
 # Boards with the full UI (16 MB+ flash). Same geometry rules as partitions.csv: the table

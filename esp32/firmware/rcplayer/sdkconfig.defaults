@@ -17,7 +17,7 @@ CONFIG_COMPILER_OPTIMIZATION_PERF=y
 CONFIG_COMPILER_CXX_EXCEPTIONS=y
 CONFIG_COMPILER_CXX_RTTI=y
 
-# ── Wi-Fi: rcNet upload headers ──
+# ── Wi-Fi: kobento-net upload headers ──
 CONFIG_HTTPD_MAX_REQ_HDR_LEN=1024
 
 # ── BLE: the NimBLE host (the board picks the controller transport) ──

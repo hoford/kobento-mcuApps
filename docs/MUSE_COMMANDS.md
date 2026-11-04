@@ -272,7 +272,7 @@ fields:
   "battery_pct": 99, "battery_mv": 8355, "charging": false, "usb_power": true,
   "battery_ma": -1, "wifi_rssi": -42, "temperature_c": 37},
  "network_ssid": "...", "version": "...",
- "ip": "192.168.50.154", "board": "m5stack_tab5", "showing": "dashboard", "pinned": null}
+ "ip": "192.168.1.154", "board": "m5stack_tab5", "showing": "dashboard", "pinned": null}
 ```
 
 - `battery_pct`, `battery_mv`, `charging`, `usb_power`:
@@ -300,9 +300,9 @@ fields:
 Every form replies with the state after any change (passwords are never sent back):
 
 ```json
-{"connected": true, "ssid": "NIXIOT", "rssi": -42, "channel": 11,
- "saved": [{"ssid": "NIXIOT", "password": true, "firmware": true},
-           {"ssid": "Google-Guest-Legacy", "password": false}]}
+{"connected": true, "ssid": "HomeWiFi", "rssi": -42, "channel": 11,
+ "saved": [{"ssid": "HomeWiFi", "password": true, "firmware": true},
+           {"ssid": "GuestNet", "password": false}]}
 ```
 
 - **`add`** saves a network and its password (8–64 characters; none for an open network). It

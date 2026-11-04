@@ -32,8 +32,11 @@ Override the kobento-mcu location with `-DKOBENTO_MCU=/path/to/kobento-mcu`.
 
 ## Build, flash — `rcplayer` (the networked player)
 
+Needs ESP-IDF v6.0.1 (installed anywhere — `~/esp/esp-idf-v6` below is just the author's path)
+and the `kobento-mcu` repo checked out alongside this one (or `-DKOBENTO_MCU=/path`).
+
 ```sh
-. ~/esp/esp-idf-v6/export.sh
+. ~/esp/esp-idf-v6/export.sh                                  # or wherever you installed ESP-IDF
 cd esp32/firmware/rcplayer
 idf.py -B build/<board> -DBOARD=<board> build                 # <board> = a kobento-mcu board
 idf.py -B build/<board> -DBOARD=<board> -p <PORT> app-flash
@@ -65,3 +68,8 @@ pairing). Because of the external SDK + token, it does not build from a bare clo
 `rcplayer` wiring to kobento-mcu + kobento-net is in place and the receiver uses kobento-net's
 protocol helpers. See the per-repo notes and the `questions` section of the hand-off for what
 is verified. Integration documents and their generators are under `documents/` and `tools/`.
+
+## License
+
+Apache License 2.0: see [LICENSE](LICENSE). Third-party software and credits are listed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

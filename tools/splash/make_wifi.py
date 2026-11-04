@@ -14,7 +14,7 @@ the rows in. It lays out with RC's own layout (a header row, then fixed-height r
 tap targets follow the screen at any size; the player fills only the rows that fit.
 
 Named variables, set by the player (docs/RC_SYSTEM_VARIABLES.md):
-  system.wifi_status       one line under the title ("Connected to NIXIOT", ...)
+  system.wifi_status       one line under the title ("Connected to HomeWiFi", ...)
   system.wifi_page         "1/2" when the list has more rows than the screen, else ""
   system.wifi_scanning     1 while a scan runs
   system.wifi_<i>_ssid     row i (0..9)

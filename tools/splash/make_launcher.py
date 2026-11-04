@@ -11,8 +11,8 @@ status line under the header), so the player's rowsThatFit() serves both.
 The document only draws; the Muse gadget (muse_rc.cpp) fills the rows in.
 
 Named variables, set by the player:
-  system.launch_status     one line under the title ("Wi-Fi NIXIOT · Muse connected")
-  system.launch_wifi       the Wi-Fi row's second line ("NIXIOT", "Not connected", ...)
+  system.launch_status     one line under the title ("Wi-Fi HomeWiFi · Muse connected")
+  system.launch_wifi       the Wi-Fi row's second line ("HomeWiFi", "Not connected", ...)
   system.launch_page       "1/2" when the list has more rows than the screen, else ""
   system.launch_pages      the number of pages
   system.launch_<i>_kind   row i (0..15): 0 empty, 1 Wi-Fi, 2 a document, 3 the pinned one

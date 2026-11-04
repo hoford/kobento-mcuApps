@@ -1,7 +1,7 @@
 menu "RC player"
 
 config RCPLAYER_DEVICE_NAME
-    string "Device name (mDNS host and rcNet name)"
+    string "Device name (mDNS host and kobento-net name)"
     default "tab5"
 
 config RCPLAYER_WIFI_SSID
@@ -12,8 +12,8 @@ config RCPLAYER_WIFI_PASSWORD
     string "Wi-Fi password"
     default ""
 
-config RCPLAYER_RCNET_PORT
-    int "rcNet receiver port"
+config RCPLAYER_KOBENTO_PORT
+    int "kobento-net receiver port"
     default 8937
 
 config RCPLAYER_DOCUMENTS

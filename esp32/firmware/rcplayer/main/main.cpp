@@ -1,7 +1,7 @@
 // RemoteCompose player.
 //
 // rcstage shows the documents; this app adds the embedded set, the serial console and the
-// rcNet receiver. A long press (1.5 s, no movement) switches to the next embedded document.
+// kobento-net receiver. A long press (1.5 s, no movement) switches to the next embedded document.
 //
 // Documents drive the device with hostAction(0, "name[=value]") (docs/RC_SYSTEM_VARIABLES.md):
 //   system.backlight=<0..1>|cycle   doc.show=<name>   doc.next   doc.back
@@ -150,7 +150,7 @@ static void publishWifi() {
     // The start-up screen's status line (named variables only: no overlay on other documents).
     rcstage::setNamed("system.banner_title", v.status);
     rcstage::setNamed("system.banner_detail", net::connected()
-        ? std::string("rcNet: ") + CONFIG_RCPLAYER_DEVICE_NAME + ".local" : std::string());
+        ? std::string("kobento-net: ") + CONFIG_RCPLAYER_DEVICE_NAME + ".local" : std::string());
     // No Muse here: the status dot (muse.link 0) takes the banner colour, green once online.
     rcstage::setNamed("muse.link", "0");
     rcstage::setNamed("system.banner_color", net::connected() ? "#4CD964" : "#FFC107");
@@ -291,7 +291,7 @@ static void tick() {
         if (isWifiDoc(kEmbeddedDocs[sCurrent].name)) open(sPrevious);
     }
     net::Received rx;
-    if (net::pollReceived(rx)) rcstage::show(std::move(rx.bytes), "rcNet: " + rx.name);
+    if (net::pollReceived(rx)) rcstage::show(std::move(rx.bytes), "kobento-net: " + rx.name);
 }
 
 extern "C" void app_main(void) {

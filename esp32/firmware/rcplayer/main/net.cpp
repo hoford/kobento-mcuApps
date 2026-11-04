@@ -391,8 +391,8 @@ std::string status() {
     std::string s;
     switch (sState) {
         case State::Connected:
-            s = "wifi: connected to '" + sTarget + "' ip " + sIp + " rcnet port " +
-                std::to_string(CONFIG_RCPLAYER_RCNET_PORT);
+            s = "wifi: connected to '" + sTarget + "' ip " + sIp + " kobento-net port " +
+                std::to_string(CONFIG_RCPLAYER_KOBENTO_PORT);
             break;
         case State::Connecting: s = "wifi: connecting to '" + sTarget + "'"; break;
         case State::Failed: s = "wifi: couldn't join '" + sFailed + "'"; break;
@@ -453,7 +453,7 @@ bool pollReceived(Received& out) {
     return true;
 }
 
-// ── rcNet HTTP receiver ─────────────────────────────────────────────────────────────────
+// ── kobento-net HTTP receiver ───────────────────────────────────────────────────────────
 
 static esp_err_t onInfo(httpd_req_t* req) {
     httpd_resp_set_type(req, "application/json");
@@ -525,8 +525,8 @@ static esp_err_t onNamed(httpd_req_t* req) {
 static void startServices() {
     if (!sHttp) {
         httpd_config_t cfg = HTTPD_DEFAULT_CONFIG();
-        cfg.server_port = CONFIG_RCPLAYER_RCNET_PORT;
-        cfg.ctrl_port = CONFIG_RCPLAYER_RCNET_PORT + 1;
+        cfg.server_port = CONFIG_RCPLAYER_KOBENTO_PORT;
+        cfg.ctrl_port = CONFIG_RCPLAYER_KOBENTO_PORT + 1;
         cfg.stack_size = 8192;
         if (httpd_start(&sHttp, &cfg) == ESP_OK) {
             httpd_uri_t info = {.uri = "/info", .method = HTTP_GET, .handler = onInfo, .user_ctx = nullptr};
@@ -541,7 +541,9 @@ static void startServices() {
     if (!mdnsUp && mdns_init() == ESP_OK) {
         mdns_hostname_set(CONFIG_RCPLAYER_DEVICE_NAME);
         mdns_txt_item_t txt[] = {{"v", "1"}, {"name", CONFIG_RCPLAYER_DEVICE_NAME}};
-        mdns_service_add(CONFIG_RCPLAYER_DEVICE_NAME, "_kobento", "_tcp", CONFIG_RCPLAYER_RCNET_PORT, txt, 2);
+        mdns_service_add(CONFIG_RCPLAYER_DEVICE_NAME, "_kobento", "_tcp", CONFIG_RCPLAYER_KOBENTO_PORT, txt, 2);
+        // Legacy alias, so senders that still discover by the old rcNet service name find us.
+        mdns_service_add(CONFIG_RCPLAYER_DEVICE_NAME, "_rcnet", "_tcp", CONFIG_RCPLAYER_KOBENTO_PORT, txt, 2);
         mdnsUp = true;
     }
 }
@@ -559,7 +561,7 @@ static void onEvent(void*, esp_event_base_t base, int32_t id, void* data) {
         auto* e = (ip_event_got_ip_t*) data;
         snprintf(sIp, sizeof(sIp), IPSTR, IP2STR(&e->ip_info.ip));
         sConnected = true;
-        ESP_LOGI(TAG, "connected, ip %s; rcNet on port %d as '%s'", sIp, CONFIG_RCPLAYER_RCNET_PORT,
+        ESP_LOGI(TAG, "connected, ip %s; kobento-net on port %d as '%s'", sIp, CONFIG_RCPLAYER_KOBENTO_PORT,
                  CONFIG_RCPLAYER_DEVICE_NAME);
         startServices();
         post({Op::GotIp, ""});

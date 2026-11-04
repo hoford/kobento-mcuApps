@@ -11,7 +11,7 @@
 //   wifi add SSID [PASSWORD]  save a network without switching (up to 8 are kept)
 //   wifi join SSID            switch to a saved network, or an open one seen in a scan
 //   wifi forget SSID          drop a saved network
-//   wifi list / net           Wi-Fi state, rcNet port, saved networks
+//   wifi list / net           Wi-Fi state, kobento-net port, saved networks
 //   scan                      print the networks in range
 //   act NAME[=VALUE]          run a host action, as a document's hostAction(0, ...) would
 //   named [PREFIX]            the showing document's named variables, and their values
