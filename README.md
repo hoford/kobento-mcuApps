@@ -24,11 +24,12 @@ board definitions, and adds its own code and documents.
 kobento-mcuApps/   (this)
 kobento-mcu/       the display library (components + boards)   REQUIRED
 kobento-net/       the delivery protocol (cpp/ header is used) REQUIRED for rcplayer
-remotecompose-experiments/   the engine (rccore)              REQUIRED
+kobento-libs/      the engine (lib/rccore)                    REQUIRED
 muse-gadget-sdk/   the Muse SDK, branch tab5-p4-hosted         only for muse-gadget
 ```
 
-Override the kobento-mcu location with `-DKOBENTO_MCU=/path/to/kobento-mcu`.
+Override the kobento-mcu location with `-DKOBENTO_MCU=/path/to/kobento-mcu`, and the engine's
+with `-DKOBENTO_LIBS_DIR=/path/to/kobento-libs`.
 
 ## Build, flash — `rcplayer` (the networked player)
 
